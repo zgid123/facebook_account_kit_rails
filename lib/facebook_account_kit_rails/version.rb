@@ -1,3 +1,3 @@
-module FacebookAccountKitRails
+module FBAccountKit
   VERSION = '0.1.0'
 end
