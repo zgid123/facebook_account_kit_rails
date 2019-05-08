@@ -43,8 +43,34 @@ end
 FBAccountKit::User.retrieve_access_token_with_auth_code(auth_token)
 ```
 
+Response
+
+```ruby
+{
+  "id" : <account_kit_user_id>,
+  "access_token" : <user_access_token>,
+  "token_refresh_interval_sec" : <refresh_interval>
+}
+```
+
 - Get user info from `access_token`
 
 ```ruby
 FBAccountKit::User.get_user_info(access_token)
+```
+
+Response
+
+```ruby
+{
+   id: "1234512345123451",
+   phone: {
+     number: "+15551234567"
+     country_prefix: "1",
+     national_number: "5551234567"
+   },
+   application: {
+     id: "5432154321543210"
+   }
+}
 ```
